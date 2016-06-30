@@ -113,6 +113,15 @@ function setSpinSpeed(seconds){
     cubeDiv.style.webkitTransition = seconds+"s";
     cubeDiv.style.transition = seconds+"s";
 }
-
+function handleClick(e){
+    console.log(e.target.id);
+    EB.clickthrough(e.target.id);
+}
+function declareDinamicInteractions(){
+    EB.clickthrough("clickSide1");
+    EB.clickthrough("clickSide2");
+    EB.clickthrough("clickSide3");
+    EB.clickthrough("clickSide4");
+}
 
 window.addEventListener("load", initEB);
